@@ -3,6 +3,6 @@
 <div id="locations">
   <% @snack.machines.each do |machine| %>
   <%= machine.location %>
-  Avg Price of Snacks: $<%= machine.average_price_of_snacks %>
+  Avg Price of Snacks: $<%= '%.2f' % machine.average_price_of_snacks %>
   <% end %>
 </div>
