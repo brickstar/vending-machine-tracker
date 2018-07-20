@@ -4,5 +4,6 @@
   <% @snack.machines.each do |machine| %>
   <%= machine.location %>
   Avg Price of Snacks: $<%= '%.2f' % machine.average_price_of_snacks %>
+  Snack Count: <%= machine.snacks.length %>
   <% end %>
 </div>

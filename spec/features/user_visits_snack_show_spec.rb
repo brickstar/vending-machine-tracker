@@ -44,4 +44,5 @@ describe 'user visits snack show page' do
       expect(page).to have_content("Snack Count: #{@machine1.snacks.length}")
       expect(page).to have_content("Snack Count: #{@machine2.snacks.length}")
     end
+  end
 end
