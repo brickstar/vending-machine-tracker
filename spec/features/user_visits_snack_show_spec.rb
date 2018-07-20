@@ -15,8 +15,8 @@ describe 'user visits snack show page' do
   it 'should see name and price of snack' do
     visit snack_path(@snack1)
 
-    expect(page).to have_content(@snack1.name)
-    expect(page).to have_content(@snack1.price)
+    expect(page).to have_content("Snack: #{@snack1.name}")
+    expect(page).to have_content("Price: $#{@snack1.price}")
   end
 
   it 'should see list of locations of machines that carry it' do

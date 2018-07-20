@@ -1,9 +1,9 @@
-<h1><%= @snack.name %></h1>
-<h2><%= @snack.price %></h2>
+<h1>Snack: <%= @snack.name %></h1>
+<h2>Price: $<%= @snack.price %></h2>
 <div id="locations">
   <% @snack.machines.each do |machine| %>
-  <%= machine.location %>
+  Location: <%= machine.location %>
   Avg Price of Snacks: $<%= '%.2f' % machine.average_price_of_snacks %>
-  Snack Count: <%= machine.snacks.length %>
+  Snack Count: <%= machine.snacks.length %></br>
   <% end %>
 </div>
