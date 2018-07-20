@@ -27,4 +27,13 @@ describe 'user visits snack show page' do
       expect(page).to have_content(@machine2.location)
     end
   end
+
+  it 'should see list of the average price of snacks in each machine' do
+    visit snack_path(@snack1)
+
+    within('#locations') do
+      expect(page).to have_content("Avg Price of Snacks: $#{@machine1.average_price_of_snacks}")
+      expect(page).to have_content("Avg Price of Snacks: $#{@machine2.average_price_of_snacks}")
+    end
+  end
 end
