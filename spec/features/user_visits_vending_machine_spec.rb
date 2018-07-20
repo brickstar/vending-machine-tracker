@@ -23,6 +23,6 @@ describe 'user visits machine show' do
 
     visit machine_path(machine)
 
-    expect(page).to have_content("Avg Price of Snacks: #{machine.average_price_of_snacks}")
+    expect(page).to have_content("Avg Price of Snacks: $#{machine.average_price_of_snacks}")
   end
 end
